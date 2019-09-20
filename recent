@@ -1,0 +1,2 @@
+#tail -50 /var/log/syslog | grep station.py
+tail -50 /var/log/syslog | grep station.py | tail -1 | sed 's/MainThread: /\n/g' | tail -1

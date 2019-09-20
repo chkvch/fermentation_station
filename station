@@ -1,0 +1,3 @@
+#! /bin/bash
+export PYTHONPATH=/home/pi/tplink-smartplug:$PYTHONPATH
+python3 station.py > station.o 2>&1
