@@ -1,0 +1,2 @@
+#! /bin/bash
+python3 simple_station.py > simple_station.o 2>&1

@@ -28,7 +28,7 @@ import os
 #with open('station.log', 'w') as f:
 #	pass
 target_t_f = 85.
-t_safe = 100.
+t_safe = 90.
 from importlib import reload
 cadence = 5 # seconds
 last_time_s = None
@@ -39,7 +39,7 @@ while True:
 	t_f = data.temperature * 9. / 5 + 32.
 	with open('status', 'r') as f:
 		status = f.readline()
-	output = '{:30} {:10s} {:5.2f} {:8.2f} {:5.2f}'.format(str(data.timestamp), status, t_f, data.pressure, data.humidity)
+	output = '{:30} {:10s} {:5.2f} {:8.2f} {:5.2f}'.format(str(data.timestamp).replace(' ','_'), status, t_f, data.pressure, data.humidity)
 	with open('station.log', 'a') as f:
 		#f.write('{} error={:.3f} dt={:6.3f}s p={:.3f} i={:.3f} d={:.3f} pid={:.3f}'.format(output, error, dt, p, i, d, pid))
 		f.write('{}\n'.format(output))

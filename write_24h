@@ -1,0 +1,1 @@
+tail -1440 station.log > station_24h.log

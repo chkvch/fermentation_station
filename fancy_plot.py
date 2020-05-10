@@ -67,10 +67,11 @@ def make():
 	#axr.yaxis.set_ticklabels(['off', 'on'])
 	#plt.savefig('history.pdf')
 	plt.title(str(datetime.datetime.now()))
-	plt.savefig('/var/www/html/image/history.png', dpi=300)
+	#plt.savefig('/var/www/html/image/history.png', dpi=300)
+	plt.savefig('/var/www/html/image/history_fancy.png', dpi=300)
 
-	ax.set_xlim(left=log['time'][-1] - 3)
-	plt.savefig('/var/www/html/image/history_3h.png', dpi=300)
+	#ax.set_xlim(left=log['time'][-1] - 3)
+	#plt.savefig('/var/www/html/image/history_3h.png', dpi=300)
 	plt.close('all')
 
 if __name__ == '__main__':
